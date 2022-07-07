@@ -41,6 +41,23 @@ a {
 a:focus,
 a:hover { background-size: 100% 2px; }
 
+button,
+input,
+textarea {
+  background: none;
+  border-radius: var(--radius);
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: var(--unit) 12px;
+  text-rendering: inherit;
+}
+button { cursor: pointer; }
+::placeholder { color: inherit; }
+
 /* layout */
 
 body { padding: 24px; }
@@ -123,6 +140,7 @@ h3 { margin: 3em 0 1em; }
 #logo {
   font-size: 40px;
   font-weight: 700;
+  margin: 0;
   text-align: center;
 }
 
@@ -260,12 +278,14 @@ h3 { margin: 3em 0 1em; }
 .card-thing {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   border-radius: 24px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 400px;
   overflow: hidden;
+  transition: background-size .2s var(--easing);
   width: 288px;
 }
 .card-thing-top {
@@ -322,4 +342,50 @@ h3 { margin: 3em 0 1em; }
 .card-thing-place-icon {
   color: #575fcc;
   margin-right: 4px;
+}
+.card-thing:hover { background-size: 110%; }
+
+/* component - .overlay */
+
+.overlay {
+  align-items: center;
+  background: #000c;
+  backdrop-filter: blur(8px);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.overlay.inline {
+  height: calc(100vh - 48px);
+  position: relative;
+  width: calc(100vw - 48px);
+}
+
+.overlay > div {
+  background: var(--color-white);
+  border-radius: 32px;
+  padding: 48px;
+  width: 496px;
+}
+.overlay h2 { margin: 0; }
+.overlay button {
+  align-items: center;
+  background: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  font-weight: 700;
+  height: 48px;
+  justify-content: center;
+  width: 100%;
+}
+
+#dialog-filters { width: 768px; }
+
+#map {
+  border-radius: 24px;
+  height: calc(100vh - 48px);
 }

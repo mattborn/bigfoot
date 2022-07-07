@@ -3,8 +3,11 @@
   <head>
     <title>Bigfoot.design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/mapbox-gl/dist/mapbox-gl.css">
     <link rel="stylesheet" href="bigfoot.css">
     <script src="https://kit.fontawesome.com/0bef9420dc.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/mapbox-gl"></script>
+    <script defer src="https://unpkg.com/scrollreveal@4.0.7"></script>
     <script defer src="bigfoot.js"></script>
   </head>
   <body>
@@ -136,12 +139,50 @@
       </div>
     </div><!-- #list-cards -->
     <h3>Filter dialog</h3>
-    <div id="dialog-filters"></div><!-- #dialog-filters -->
-    <h3>Collect dialog</h3>
-    <div id="dialog-save"></div><!-- #dialog-save -->
+    <p>Opened from list of things</p>
+    <div class="inline overlay">
+      <div id="dialog-filters">
+        <h2>Concert Filters</h2>
+        <h3>Sub Categories</h3>
+        <h3>Ratings</h3>
+        <h3>Timing</h3>
+        <h3>Pricing</h3>
+        <button>Apply Filters</button>
+      </div><!-- #dialog-filters -->
+    </div>
+    <h3>Save dialog</h3>
+    <p>Opened from list of things or thing detail</p>
+    <div class="inline overlay">
+      <div id="dialog-save">
+        <h2>Nina Bae Concert</h2>
+        <p>Save to Collection</p>
+        <div class="button-add">
+          <i class="button-add-icon fa-regular fa-plus"></i>
+          <div class="button-add-name">Add New</div>
+        </div>
+        <input id="great_local_experiences" type="checkbox">
+        <label for="great_local_experiences">Great Local Experiences</label>
+        <input id="new_york_cafes" type="checkbox">
+        <label for="new_york_cafes">New York Cafes</label>
+        <button>Add Experience</button>
+      </div><!-- #dialog-save -->
+    </div>
     <h3>Collection dialog</h3>
+    <p>Opened from save dialog and not sure where else<p>
+    <div class="inline overlay">
+      <div id="dialog-save">
+        <h2>New Collection</h2>
+        <label for="collection_title">Collection Title</label>
+        <input id="collection_title" placeholder="Add Title">
+        <label for="collection_title">Privacy</label>
+        <input id="collection_title" placeholder="Private">
+        <button>Cancel</button>
+        <button>Create</button>
+      </div><!-- #dialog-save -->
+    </div>
     <div id="dialog-collection"></div><!-- #dialog-collection -->
     <h3>Map box</h3>
+    <p>Should attempt to find your current browser location</p>
     <div id="map"></div><!-- #map -->
     <h3>Spot list</h3>
     <div id="list-spots"></div><!-- #list-spots -->
