@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
+:root {
+  --color-white: #fff;
+  --color-background: #fafafa;
+  --color-hairline: #e7e7e7;
+  --color-text-400: #aeaeae;
+  --color-black: #000;
+  --color-primary: #6ea0ff;
+  --radius: 12px;
+  --unit: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {}
+}
+
+* { box-sizing: border-box; }
+
+/* cascade */
+
+body {
+  background: var(--color-white);
+  color: var(--color-black);
+  font: 500 16px/1 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+  text-rendering: geometricPrecision;
+}
+
+/* https://www.dannyguo.com/blog/animated-multiline-link-underlines-with-css/ */
+a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  color: var(--color-link);
+  text-decoration: none;
+  transition: background-size .5s cubic-bezier(.1,1,.3,1);
+}
+a:focus,
+a:hover { background-size: 100% 2px; }
+
+/* layout */
+
+body { padding: 24px; }
+#bigfoot {
+  display: flex;
+  gap: 24px;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 24px;
+  max-width: calc(100vw - 400px);
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.column,
+.fill { flex: 1; }
+
+/* theme - default */
+
+h1,
+h2,
+h3 { margin: 3em 0 1em; }
+
+/* component - #bar-top */
+
+#bar-top {
+  align-items: center;
+  border-bottom: 1px solid var(--color-hairline);
+  display: flex;
+  gap: 24px;
+  padding: 0 0 24px;
+}
+
+#page-title {
+  font-size: 30px;
+  flex: 1;
+}
+
+#select-location {
+  background: var(--color-background);
+  border-radius: 20px;
+  color: inherit;
+  display: flex;
+  flex: 1;
+}
+
+#button-user {
+  align-items: center;
+  background: var(--color-background);
+  border-radius: 20px;
+  display: flex;
+  gap: 16px;
+  height: 72px;
+  padding: 0 24px;
+}
+.button-user-img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.button-user-name {}
+
+/* component - .breadcrumb */
+
+.breadcrumb-group {
+  align-items: center;
+  display: flex;
+  gap: var(--unit);
+}
+
+/* component - #logo */
+
+#logo {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* component - #nav-main */
+
+#nav-main {
+  background: var(--color-background);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+  min-height: calc(100vh - 48px);
+  max-width: 328px;
+}
+
+/* component - .nav-tab */
+
+.nav-tab {
+  align-items: center;
+  border-radius: var(--radius);
+  color: #aeaeae;
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+  height: 72px;
+  padding: 16px 24px;
+}
+.nav-tab-icon {
+  font-size: 24px;
+  width: 64px;
+}
+.nav-tab-name { flex: 1; }
+
+.nav-tab:hover { color: var(--color-primary); }
+.nav-tab.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* component - .card-thing */
+
+.card-thing {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 24px;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  font-size: 21px;
+  gap: 24px;
+  height: 324px;
+  justify-content: center;
+  line-height: 1.3;
+  padding: 48px;
+  text-align: center;
+}
+.card-thing .nav-tab {
+  background: var(--color-white);
+  border-radius: 28px;
+  color: var(--color-black);
+  font-size: 15px;
+  height: 56px;
+}
+
+/* component - #bar-cat */
+
+#bar-cat {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+}
+.card-cat {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 80px;
+}
+.card-cat-icon {
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-hairline);
+  color: #5f5f5f;
+  display: flex;
+  font-size: 32px;
+  height: 80px;
+  justify-content: center;
+  padding: 12px;
+  width: 80px;
+}
+
+.card-cat:hover {}
+.card-cat.active {}

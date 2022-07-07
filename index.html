@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bigfoot.design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bigfoot.css">
+    <script src="https://kit.fontawesome.com/0bef9420dc.js" crossorigin="anonymous"></script>
+    <script defer src="bigfoot.js"></script>
+  </head>
+  <body>
+    <h1>Bigfoot.design</h1>
+    <p>Last updated July 6</p>
+    <h2>Design system library thing</h2>
+    <p>An interactive guide to the user interface (the thing people see and click)</p>
+    <h2>Change the page options</h2>
+    <p>Flip a switch just to see what happens</p>
+    Authenticated (they signed in somehow)
+    <h2>Desktop deconstruction</h2>
+    <h3>Main nav</h3>
+    <p>Includes logo, nav button, and card thing</p>
+    <div id="nav-main">
+      <h1 id="logo">Bigfoot</h1>
+      <div class="nav-tab-group">
+        <div class="nav-tab active">
+          <i class="nav-tab-icon fa-solid fa-fire-flame-curved"></i>
+          <div class="nav-tab-label">Dashboard</div>
+        </div>
+        <div class="nav-tab">
+          <i class="nav-tab-icon fa-solid fa-search"></i>
+          <div class="nav-tab-label">Search</div>
+        </div>
+        <div class="nav-tab">
+          <i class="nav-tab-icon fa-solid fa-bookmark"></i>
+          <div class="nav-tab-label">Saved</div>
+        </div>
+        <div class="nav-tab">
+          <i class="nav-tab-icon fa-solid fa-user"></i>
+          <div class="nav-tab-label">Account</div>
+        </div>
+        <div class="nav-tab">
+          <i class="nav-tab-icon fa-solid fa-person-to-door"></i>
+          <div class="nav-tab-label">Logout</div>
+        </div>
+      </div>
+      <div class="fill"></div>
+      <div class="card-thing">
+        <div>Look for things to do <b>near you</b></div>
+        <div class="nav-tab">
+          <i class="nav-tab-icon fa-solid fa-map"></i>
+          <div class="nav-tab-label">Map</div>
+        </div>
+      </div>
+    </div><!-- #nav-main -->
+    <h3>Top bar</h3>
+    <div id="bar-top">
+      <div id="page-title">Explore Experiences <i class="fa-solid fa-face-smile-beam"></i></div>
+      <div id="select-location" class="nav-tab">
+        <i class="nav-tab-icon fa-solid fa-location-dot"></i>
+        <div class="nav-tab-name">Select Location</div>
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+      <div id="button-user">
+        <img class="button-user-img" src="https://i.pravatar.cc/300">
+        <div class="button-user-name">Abe Rigal</div>
+      </div>
+    </div><!-- #bar-top -->
+    <h3>Category bar</h3>
+    <div id="bar-cat">
+      <div class="card-cat">
+        <div class="card-cat-icon"><i class=" fa-regular fa-microphone-stand"></i></div>
+        <div class="card-cat-name">Concert</div>
+      </div>
+      <div class="card-cat">
+        <div class="card-cat-icon"><i class=" fa-regular fa-smile-beam"></i></div>
+        <div class="card-cat-name">Experience</div>
+      </div>
+      <div class="card-cat">
+        <div class="card-cat-icon"><i class=" fa-regular fa-utensils"></i></div>
+        <div class="card-cat-name">Food</div>
+      </div>
+      <div class="card-cat">
+        <div class="card-cat-icon"><i class=" fa-regular fa-mug-hot"></i></div>
+        <div class="card-cat-name">Coffee</div>
+      </div>
+      <div class="card-cat">
+        <div class="card-cat-icon"><i class=" fa-regular fa-star-shooting"></i></div>
+        <div class="card-cat-name">Attractions</div>
+      </div>
+      <div class="card-cat">
+        <div class="card-cat-icon"><i class=" fa-regular fa-person-hiking"></i></div>
+        <div class="card-cat-name">Hiking</div>
+      </div>
+      <div class="card-cat">
+        <div class="card-cat-icon"><i class=" fa-regular fa-moon"></i></div>
+        <div class="card-cat-name">Nightlife</div>
+      </div>
+      <div class="card-cat">
+        <div class="card-cat-icon"><i class=" fa-regular fa-umbrella-beach"></i></div>
+        <div class="card-cat-name">Beach</div>
+      </div>
+      <div class="card-cat">
+        <div class="card-cat-icon"><i class=" fa-regular fa-angle-right"></i></div>
+      </div>
+    </div><!-- #bar-cat -->
+    <h3>Chip bar</h3>
+    <div id="bar-chip"></div><!-- #bar-chip -->
+    <h3>Card list</h3>
+    <div id="list-cards"></div><!-- #list-cards -->
+    <h3>Filter dialog</h3>
+    <div id="dialog-filters"></div><!-- #dialog-filters -->
+    <h3>Collect dialog</h3>
+    <div id="dialog-save"></div><!-- #dialog-save -->
+    <h3>Collection dialog</h3>
+    <div id="dialog-collection"></div><!-- #dialog-collection -->
+    <h3>Map box</h3>
+    <div id="map"></div><!-- #map -->
+    <h3>Spot list</h3>
+    <div id="list-spots"></div><!-- #list-spots -->
+    <h3>Spot card</h3>
+    <div id="card-spot"></div><!-- #card-spot -->
+    <h3>Event details</h3>
+    <div id="page-event">
+      <!-- all sorts of other elements in here -->
+    </div><!-- #page-event -->
+    <h3>User details</h3>
+    <div id="page-user"></div><!-- #page-user -->
+    <h3>User form</h3>
+    <div id="form-user"></div><!-- #form-user -->
+    <h3>Collection details</h3>
+    <div id="page-collection"></div><!-- #page-collection -->
+    <h3>Collection form</h3>
+    <div id="form-collection"></div><!-- #form-collection -->
+    <h3>Collaborator dialog</h3>
+    <div id="dialog-collaborators"></div><!-- #dialog-collaborators -->
+    <h3>Sign up form</h3>
+    <div id="form-sign-up"></div><!-- #sign-up -->
+    <h3>Sign up page</h3>
+    <div id="form-sign-in"></div><!-- #sign-in -->
+  </body>
+</html>
