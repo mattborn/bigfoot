@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Bigfoot.design</h1>
-    <p>Last updated July 6</p>
+    <p>Last updated July 7</p>
     <h2>Design system library thing</h2>
     <p>An interactive guide to the user interface (the thing people see and click)</p>
     <h2>Change the page options</h2>
@@ -17,7 +17,7 @@
     Authenticated (they signed in somehow)
     <h2>Desktop deconstruction</h2>
     <h3>Main nav</h3>
-    <p>Includes logo, nav button, and card thing</p>
+    <p>Includes logo, nav button, and card map thing</p>
     <div id="nav-main">
       <h1 id="logo">Bigfoot</h1>
       <div class="nav-tab-group">
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="fill"></div>
-      <div class="card-thing">
+      <div class="card-map-thing">
         <div>Look for things to do <b>near you</b></div>
         <div class="nav-tab">
           <i class="nav-tab-icon fa-solid fa-map"></i>
@@ -52,6 +52,7 @@
       </div>
     </div><!-- #nav-main -->
     <h3>Top bar</h3>
+    <p>Includes page title, location picker, and user button thing</p>
     <div id="bar-top">
       <div id="page-title">Explore Experiences <i class="fa-solid fa-face-smile-beam"></i></div>
       <div id="select-location" class="nav-tab">
@@ -65,6 +66,7 @@
       </div>
     </div><!-- #bar-top -->
     <h3>Category bar</h3>
+    <p>Includes these icon filter things</p>
     <div id="bar-cat">
       <div class="card-cat">
         <div class="card-cat-icon"><i class=" fa-regular fa-microphone-stand"></i></div>
@@ -103,9 +105,36 @@
       </div>
     </div><!-- #bar-cat -->
     <h3>Chip bar</h3>
-    <div id="bar-chip"></div><!-- #bar-chip -->
+    <p>Includes these pill-shaped filter things</p>
+    <div id="bar-chip">
+      <div class="chip active">Near You</div>
+      <div class="chip">Night Time</div>
+      <div class="chip">Day Time</div>
+      <div class="chip">Weekend</div>
+    </div><!-- #bar-chip -->
     <h3>Card list</h3>
-    <div id="list-cards"></div><!-- #list-cards -->
+    <p>Includes a summary of the things we might do—our bread and butter!</p>
+    <div id="list-cards">
+      <div class="card-thing" style="background-image: url(https://source.unsplash.com/StFUwkNsvcY/576x800);">
+        <div class="card-thing-top fill">
+          <div class="card-thing-date">Jul 7, 2022</div>
+          <div class="fill"></div>
+          <div class="card-thing-save"><i class="fa-regular fa-bookmark"></i></div>
+        </div>
+        <div class="card-thing-footer">
+          <div class="card-thing-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <h2 class="card-thing-name">Coney Island</h2>
+          <div class="card-thing-place">
+            <i class="card-thing-place-icon fa-solid fa-location-dot"></i>
+            Brooklyn, New York
+          </div>
+        </div>
+      </div>
+    </div><!-- #list-cards -->
     <h3>Filter dialog</h3>
     <div id="dialog-filters"></div><!-- #dialog-filters -->
     <h3>Collect dialog</h3>
