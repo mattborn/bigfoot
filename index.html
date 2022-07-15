@@ -10,14 +10,14 @@
     <script defer src="https://unpkg.com/scrollreveal@4.0.7"></script>
     <script defer src="bigfoot.js"></script>
   </head>
-  <body>
+  <body class="doc">
     <h1>Bigfoot.design</h1>
-    <p>Last updated July 7</p>
+    <p>Last updated July 14</p>
     <h2>Design system library thing</h2>
     <p>An interactive guide to the user interface (the thing people see and click)</p>
-    <h2>Change the page options</h2>
+    <!-- <h2>Change the page options</h2>
     <p>Flip a switch just to see what happens</p>
-    Authenticated (they signed in somehow)
+    Authenticated (they signed in somehow) -->
     <h2>Desktop deconstruction</h2>
     <h3>Main nav</h3>
     <p>Includes logo, nav button, and card map thing</p>
@@ -72,39 +72,39 @@
     <p>Includes these icon filter things</p>
     <div id="bar-cat">
       <div class="card-cat">
-        <div class="card-cat-icon"><i class=" fa-regular fa-microphone-stand"></i></div>
+        <div class="card-cat-icon"><i class="fa-regular fa-microphone-stand"></i></div>
         <div class="card-cat-name">Concert</div>
       </div>
       <div class="card-cat">
-        <div class="card-cat-icon"><i class=" fa-regular fa-smile-beam"></i></div>
+        <div class="card-cat-icon"><i class="fa-regular fa-smile-beam"></i></div>
         <div class="card-cat-name">Experience</div>
       </div>
       <div class="card-cat">
-        <div class="card-cat-icon"><i class=" fa-regular fa-utensils"></i></div>
+        <div class="card-cat-icon"><i class="fa-regular fa-utensils"></i></div>
         <div class="card-cat-name">Food</div>
       </div>
       <div class="card-cat">
-        <div class="card-cat-icon"><i class=" fa-regular fa-mug-hot"></i></div>
+        <div class="card-cat-icon"><i class="fa-regular fa-mug-hot"></i></div>
         <div class="card-cat-name">Coffee</div>
       </div>
       <div class="card-cat">
-        <div class="card-cat-icon"><i class=" fa-regular fa-star-shooting"></i></div>
+        <div class="card-cat-icon"><i class="fa-regular fa-star-shooting"></i></div>
         <div class="card-cat-name">Attractions</div>
       </div>
       <div class="card-cat">
-        <div class="card-cat-icon"><i class=" fa-regular fa-person-hiking"></i></div>
+        <div class="card-cat-icon"><i class="fa-regular fa-person-hiking"></i></div>
         <div class="card-cat-name">Hiking</div>
       </div>
       <div class="card-cat">
-        <div class="card-cat-icon"><i class=" fa-regular fa-moon"></i></div>
+        <div class="card-cat-icon"><i class="fa-regular fa-moon"></i></div>
         <div class="card-cat-name">Nightlife</div>
       </div>
       <div class="card-cat">
-        <div class="card-cat-icon"><i class=" fa-regular fa-umbrella-beach"></i></div>
+        <div class="card-cat-icon"><i class="fa-regular fa-umbrella-beach"></i></div>
         <div class="card-cat-name">Beach</div>
       </div>
       <div class="card-cat">
-        <div class="card-cat-icon"><i class=" fa-regular fa-angle-right"></i></div>
+        <div class="card-cat-icon"><i class="fa-regular fa-angle-right"></i></div>
       </div>
     </div><!-- #bar-cat -->
     <h3>Chip bar</h3>
@@ -115,6 +115,21 @@
       <div class="chip">Day Time</div>
       <div class="chip">Weekend</div>
     </div><!-- #bar-chip -->
+    <h3>Meta stack</h3>
+    <p>Refactor: need a new component for name stacked on icon-value pairs since it’s used in multiple cards.</p>
+    <div class="meta">
+      <h2 class="meta-name">Name</h2>
+      <div class="meta-pair-group">
+        <div class="meta-pair">
+          <div class="meta-pair-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="meta-pair-value">Value</div>
+        </div>
+        <div class="meta-pair">
+          <div class="meta-pair-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="meta-pair-value">Value</div>
+        </div>
+      </div>
+    </div><!-- .meta-stack -->
     <h3>Card list</h3>
     <p>Includes a summary of the things we might do—our bread and butter!</p>
     <div id="list-cards">
@@ -185,9 +200,81 @@
     <p>Should attempt to find your current browser location</p>
     <div id="map"></div><!-- #map -->
     <h3>Spot list</h3>
-    <div id="list-spots"></div><!-- #list-spots -->
-    <h3>Spot card</h3>
-    <div id="card-spot"></div><!-- #card-spot -->
+    <div id="list-spots">
+      <h2>Restaurants</h2>
+      <div class="list-chips">
+        <div class="chip-smaller">Indian</div>
+        <div class="chip-smaller">Italian</div>
+        <div class="chip-smaller">Fast Food</div>
+        <div class="chip-smaller">Indian</div>
+        <div class="chip-smaller"><i class="fa-regular fa-angle-right"></i></div>
+      </div>
+      <div class="card-spot">
+        <div class="card-spot-img" style="background-image: url(https://source.unsplash.com/XYavU5BGF9o/736x464);">
+          <div class="card-spot-reel">
+            <div class="part active"></div>
+            <div class="part"></div>
+            <div class="part"></div>
+            <div class="part"></div>
+            <div class="part"></div>
+          </div>
+        </div>
+        <div class="card-spot-footer">
+          <div class="card-spot-text">
+            <h2 class="card-spot-name">Handi Restaurant</h2>
+            <div class="card-spot-meta">
+              <i class="card-spot-meta-icon fa-solid fa-location-dot"></i>
+              <div class="card-spot-meta-value">6 miles away</div>
+              •
+              <i class="card-spot-meta-icon fa-solid fa-star"></i>
+              <div class="card-spot-meta-value">4.6 rating</div>
+            </div>
+          </div>
+          <div class="card-thing-save"><i class="fa-regular fa-bookmark"></i></div>
+        </div>
+      </div><!-- #card-spot -->
+    </div><!-- #list-spots -->
+    <h3>Map pin</h3>
+    <div class="pin-map"><i class="fa-solid fa-utensils"></i></div>
+    <div class="pin-map">5</div>
+    <h3>Map card</h3>
+    <div class="card-map">
+      <div class="card-map-top">
+        <div class="meta">
+          <h2 class="meta-name">Nina Bae Concert</h2>
+          <div class="meta-pair-group">
+            <div class="meta-pair">
+              <div class="meta-pair-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="meta-pair-value">Rome, Italy (6 miles away)</div>
+            </div>
+          </div>
+        </div><!-- .meta-stack -->
+        <div class="card-map-price">$80</div>
+      </div>
+      <div class="list-chips">
+        <div class="chip-smaller color-orange-ish">Concert</div>
+        <div class="chip-smaller color-blue-ish">Experience</div>
+        <div class="chip-icon"><i class="fa-regular fa-bookmark"></i></div>
+        <div class="chip-icon"><i class="fa-regular fa-share"></i></div>
+      </div>
+      <img class="card-map-img" src="https://source.unsplash.com/x3bS-vszl5Y/640x384">
+      <div class="card-map-detail-group">
+        <div class="card-map-detail">
+          <div class="card-map-detail-icon fa-solid fa-clock"></div>
+          <div class="card-map-detail-text">
+            <div class="card-map-detail-top">02:30 – 04:30 pm</div>
+            <div class="card-map-detail-bottom">5 May, 2022</div>
+          </div>
+        </div>
+        <div class="card-map-detail">
+          <div class="card-map-detail-icon fa-solid fa-star"></div>
+          <div class="card-map-detail-text">
+            <div class="card-map-detail-top">129 reviews</div>
+            <div class="card-map-detail-bottom">4.6 rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <h3>Event details</h3>
     <div id="page-event">
       <!-- all sorts of other elements in here -->
