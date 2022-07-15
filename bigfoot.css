@@ -34,7 +34,7 @@ a {
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
-  color: var(--color-link);
+  color: var(--color-primary);
   text-decoration: none;
   transition: background-size .5s cubic-bezier(.1,1,.3,1);
 }
@@ -66,13 +66,14 @@ body { padding: 24px; }
   gap: 24px;
 }
 
-#content {
-  display: flex;
+.content {
+  display: none;
   flex-direction: column;
   flex: 1;
   gap: 24px;
   max-width: calc(100vw - 400px);
 }
+.content.active { display: flex; }
 
 .row {
   display: flex;
