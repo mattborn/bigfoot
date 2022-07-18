@@ -12,7 +12,7 @@
   </head>
   <body class="doc">
     <h1>Bigfoot.design</h1>
-    <p>Last updated July 14</p>
+    <p>Last updated July 18</p>
     <a href="demo">View demo</a> 
     <h2>Design system library thing</h2>
     <p>An interactive guide to the user interface (the thing people see and click)</p>
@@ -190,8 +190,8 @@
         <h2>New Collection</h2>
         <label for="collection_title">Collection Title</label>
         <input id="collection_title" placeholder="Add Title">
-        <label for="collection_title">Privacy</label>
-        <input id="collection_title" placeholder="Private">
+        <label for="collection_privacy">Privacy</label>
+        <input id="collection_privacy" placeholder="Private">
         <button>Cancel</button>
         <button>Create</button>
       </div><!-- #dialog-save -->
@@ -278,21 +278,269 @@
     </div>
     <h3>Event details</h3>
     <div id="page-event">
-      <!-- all sorts of other elements in here -->
+      <div class="thing-image-group">
+        <div class="thing-image"></div>
+        <div class="thing-image-group">
+          <div class="thing-image-group">
+            <div class="thing-image"></div>
+            <div class="thing-image"></div>
+          </div>
+          <div class="thing-image-group">
+            <div class="thing-image"></div>
+            <div class="thing-image"></div>
+          </div>
+        </div>
+      </div>
+      <div class="list-chips">
+        <div class="chip-smaller color-orange-ish">Concert</div>
+        <div class="chip-smaller color-blue-ish">Experience</div>
+        <button>Book Now</button>
+        <div class="chip-icon"><i class="fa-regular fa-bookmark"></i></div>
+        <div class="chip-icon"><i class="fa-regular fa-share"></i></div>
+      </div>
+      <div class="card-map-top">
+        <div class="meta">
+          <h2 class="meta-name">Nina Bae Concert</h2>
+          <div class="meta-pair-group">
+            <div class="meta-pair">
+              <div class="meta-pair-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="meta-pair-value">Rome, Italy (6 miles away)</div>
+            </div>
+          </div>
+        </div><!-- .meta-stack -->
+        <div class="card-map-price">$80</div>
+      </div>
+      <div>
+        <h2>Description</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet lacinia libero, quis faucibus neque. Donec ac risus dictum, egestas erat facilisis, feugiat diam. Mauris viverra elementum gravida. Praesent porttitor sed risus sit amet consequat. Donec commodo urna eu imperdiet auctor. In vel nisl et odio facilisis euismod sit amet a nisi. Nulla ullamcorper tempus consequat. Sed vitae nisi sit amet sem ultricies malesuada. Curabitur sollicitudin mi eros, et rutrum nibh porta mollis.</p>
+      </div>
+      <div class="card-map-detail-group">
+        <div class="card-map-detail">
+          <div class="card-map-detail-icon fa-solid fa-clock"></div>
+          <div class="card-map-detail-text">
+            <div class="card-map-detail-top">02:30 – 04:30 pm</div>
+            <div class="card-map-detail-bottom">5 May, 2022</div>
+          </div>
+        </div>
+        <div class="card-map-detail">
+          <div class="card-map-detail-icon fa-solid fa-star"></div>
+          <div class="card-map-detail-text">
+            <div class="card-map-detail-top">Ratings</div>
+            <div class="card-map-detail-bottom">4.6 rating</div>
+          </div>
+        </div>
+        <div class="card-map-detail">
+          <div class="card-map-detail-icon fa-solid fa-copy"></div>
+          <div class="card-map-detail-text">
+            <div class="card-map-detail-top">Saved in Rome Italy</div>
+            <div class="card-map-detail-bottom">Concerts Around Me</div>
+          </div>
+        </div>
+      </div><!-- .card-map-detail-group -->
+      <div>
+        More details @ Condé Nast Traveler
+        Logo images: Traveler, TimeOut, culture trip
+      </div>
+      Map?
+      <div>
+        <h2>Reviews</h2>
+      </div>
+      <div>
+        <h2>Public Collections</h2>
+        <div class="card-collection" style="background-image: url(https://source.unsplash.com/aZ3qiq1eTRk/736x464);">
+          <div class="card-thing-top">
+            <div class="fill"></div>
+            <div class="card-thing-save"><i class="fa-regular fa-bookmark"></i></div>
+          </div>
+        </div>
+        <div class="card-collection"></div>
+        <div class="card-collection"></div>
+        <div class="card-collection"></div>
+      </div>
     </div><!-- #page-event -->
     <h3>User details</h3>
-    <div id="page-user"></div><!-- #page-user -->
+    <div id="page-user">
+      <div class="card-soft">
+        user avatar
+        <h2>Linda Elizabeth</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet lacinia libero, quis faucibus neque. Donec ac risus dictum, egestas erat facilisis, feugiat diam. Mauris viverra elementum gravida. Praesent porttitor sed risus sit amet consequat. Donec commodo urna eu imperdiet auctor. In vel nisl et odio facilisis euismod sit amet a nisi. Nulla ullamcorper tempus consequat. Sed vitae nisi sit amet sem ultricies malesuada. Curabitur sollicitudin mi eros, et rutrum nibh porta mollis.</p>
+        200 Followers 100 Following 10 Collections
+        <button>Follow</button>
+        <div class="chip-icon"><i class="fa-regular fa-share"></i></div>
+      </div>
+      <div>
+        <h2>Your Collections</h2>
+        <p>Things you want to do.</p>
+        <div>
+          <i class="fa-regular fa-share"></i>
+          <input placeholder="Search Collection">
+        </div>
+        <button>+ Collection</button>
+      </div>
+      <div class="card-collection">
+        icon
+        <div class="card-collection-footer">
+          Local Concerts
+          20 Saved
+        </div>
+      </div>
+      <div>
+        <h2>Other Collections</h2>
+      </div>
+    </div><!-- #page-user -->
     <h3>User form</h3>
-    <div id="form-user"></div><!-- #form-user -->
+    <div id="form-user">
+      user avatar (same component as above)
+      Linda Elizabeth
+      <a href="#">Change Profile Photo</a>
+      <h3>Edit Profile</h3>
+      <form>
+        <label for="user_fullname">Your Name</label>
+        <input id="user_fullname" value="Linda Elizabeth">
+        <label for="user_email">Change Email</label>
+        <input id="user_email" value="user@gmail.com">
+        <label for="user_password">Change Password</label>
+        <input id="user_password" type="password" value="12345678">
+        <label for="user_about">About Me</label>
+        <textarea id="user_about" value="Lorem ipsum…"></textarea>
+        <button>Update Changes</button>
+      </form>
+    </div><!-- #form-user -->
     <h3>Collection details</h3>
-    <div id="page-collection"></div><!-- #page-collection -->
+    <div id="page-collection">
+      ???
+    </div><!-- #page-collection -->
     <h3>Collection form</h3>
-    <div id="form-collection"></div><!-- #form-collection -->
+    <div id="form-collection">
+      hero image w/ fade
+      <a href="#">Swap Photo icon:image-edit</a>
+      <h3>Edit Collection</h3>
+      <form>
+        <label for="collection_name">Collection Name</label>
+        <input id="collection_name" value="Great Hotels">
+        <label for="collection_email">Security Settings</label>
+        <input id="collection_email" value="Public">
+        <label for="collection_about">Description</label>
+        <textarea id="collection_about" value="Lorem ipsum…"></textarea>
+        <label for="collection_password">Add Collaborators</label>
+        <input id="collection_password" value="@Jinadinkle">
+        <div>Circle face 1</div>
+        <div>Circle face 2</div>
+        <div>plus in a circle</div>
+        <button>Update Changes</button>
+      </form>
+    </div><!-- #form-collection -->
+    <h3>Collection options dialog</h3>
+    <div id="dialog-collection-options">
+      <h2>Collection options</h2>
+      <div>
+        <div>icon:image-edit</div>
+        <div>Edit Collection</div>
+      </div>
+      <div>
+        <div>icon:trash-alt</div>
+        <div>Delete Collection</div>
+      </div>
+    </div><!-- #dialog-collection-options -->
     <h3>Collaborator dialog</h3>
-    <div id="dialog-collaborators"></div><!-- #dialog-collaborators -->
-    <h3>Sign up form</h3>
-    <div id="form-sign-up"></div><!-- #sign-up -->
-    <h3>Sign up page</h3>
-    <div id="form-sign-in"></div><!-- #sign-in -->
+    <div id="dialog-collaborators">
+      <div>
+        <div>Circle face</div>
+        <div>Maria Linda</div>
+      </div>
+      (2 more here)
+      (slide to reveal trash button?)
+      (does this make sense?)
+    </div><!-- #dialog-collaborators -->
+    <h3>Background squiggle mask</h3>
+    <p>Wanted to be able to reuse this as an SVG mask with any image (might need to mess with it to make fully responsive)</p>
+    <div id="background">
+      <svg width="100%" height="100vh" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 935 1149">
+        <mask id="squiggle_mask">
+          <path fill="#ffffff" d="M935 0H305.958C249.596 0 216.345 63.2117 248.275 109.657L320.266 214.371C342.209 246.289 334.06 289.961 302.082 311.818L206.424 377.2C171.635 400.979 165.587 449.88 193.535 481.418L246.553 541.244C274.451 572.724 268.482 621.525 233.82 645.354L83.7831 748.5C47.0844 773.729 42.9643 826.362 75.29 856.994L100.445 880.831C135.678 914.219 127.063 972.458 83.6735 994.215L39.3796 1016.43C-26.6101 1049.52 -3.06448 1149 70.7572 1149H935V0Z"/>
+        </mask>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://source.unsplash.com/dTv3VwTvT0c/1280x1280" mask="url(#squiggle_mask)"></image>
+      </svg>
+    </div>
+    <h3>Sign in form</h3>
+    <p>These are feeling quite large…</p>
+    <div id="form-sign-up">
+      <form>
+        <h1>Bigfoot</h1>
+        <div>
+          <h2>Create Account</h2>
+          <p>Enter your credentials and make account</p>
+        </div>
+        <div class="field-set-h">
+          <div class="field-set">
+            <label for="signup_username">Username</label>
+            <input id="signup_username" placeholder="username">
+          </div>
+          <div class="field-set">
+            <label for="signup_password">Password</label>
+            <input id="signup_password" placeholder="••••••••" type="password">
+            <i class="fa-solid fa-eye-slash"></i>
+          </div>
+        </div>
+        <div class="field-set">
+          <label for="signup_email">Email</label>
+          <input id="signup_email" placeholder="example@gmail.com">
+        </div>
+        <div class="field-set-h">
+          <input id="signup_agree" type="checkbox">
+          <label for="signup_agree">By registering, you have read and agreed to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</label>
+        </div>
+        <button>Create Account</button>
+        <p class="center">Already have an account? <a href="#">Log in</a></p>
+        <p class="center"><a href="#">Sign Up Later</a></p>
+      </form>
+      <div id="background">
+        <svg width="100%" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 935 1149">
+          <mask id="squiggle_mask">
+            <path fill="#ffffff" d="M935 0H305.958C249.596 0 216.345 63.2117 248.275 109.657L320.266 214.371C342.209 246.289 334.06 289.961 302.082 311.818L206.424 377.2C171.635 400.979 165.587 449.88 193.535 481.418L246.553 541.244C274.451 572.724 268.482 621.525 233.82 645.354L83.7831 748.5C47.0844 773.729 42.9643 826.362 75.29 856.994L100.445 880.831C135.678 914.219 127.063 972.458 83.6735 994.215L39.3796 1016.43C-26.6101 1049.52 -3.06448 1149 70.7572 1149H935V0Z"/>
+          </mask>
+          <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://source.unsplash.com/tQMZGB6O6xg/1280x1280" mask="url(#squiggle_mask)"></image>
+        </svg>
+      </div>
+    </div><!-- #sign-up -->
+    <h3>Sign in page</h3>
+    <p>Should we assume users always sign up from a search context?</p>
+    <div id="form-sign-in">
+      <form>
+        <h1>Bigfoot</h1>
+        <h2>Account login</h2>
+        <div class="field-set">
+          <label for="login_email">Email</label>
+          <input id="login_email" value="user@gmail.com">
+        </div>
+        <div class="field-set">
+          <label for="login_password">Password</label>
+          <input id="login_password" type="password" value="user@gmail.com">
+        </div>
+        <div><a href="#">Forgot the password</a></div>
+        <button>Login</button>
+        <p class="center">Don’t have an account? <a href="#">Sign Up</a></p>
+      </form>
+      <div id="background">
+        <svg width="100%" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 935 1149">
+          <mask id="squiggle_mask">
+            <path fill="#ffffff" d="M935 0H305.958C249.596 0 216.345 63.2117 248.275 109.657L320.266 214.371C342.209 246.289 334.06 289.961 302.082 311.818L206.424 377.2C171.635 400.979 165.587 449.88 193.535 481.418L246.553 541.244C274.451 572.724 268.482 621.525 233.82 645.354L83.7831 748.5C47.0844 773.729 42.9643 826.362 75.29 856.994L100.445 880.831C135.678 914.219 127.063 972.458 83.6735 994.215L39.3796 1016.43C-26.6101 1049.52 -3.06448 1149 70.7572 1149H935V0Z"/>
+          </mask>
+          <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://source.unsplash.com/6mze64HRU2Q/1280x1280" mask="url(#squiggle_mask)"></image>
+        </svg>
+      </div>
+    </div><!-- #sign-in -->
+    <h3>Interests page</h3>
+    <div id="pick-interests">
+      <h1>Bigfoot</h1>
+      <h2>Tell Us About Your Interests</h2>
+      <p>Select from the categories to get you onboard.</p>
+      <a href="#">Skip -></a>
+      <div>
+        icon:cutlery
+        <div>Food</div>
+      </div>
+      (squiggle background image)
+    </div>
   </body>
 </html>
