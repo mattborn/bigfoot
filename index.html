@@ -12,7 +12,7 @@
   </head>
   <body class="doc">
     <h1>Bigfoot.design</h1>
-    <p>Last updated July 18</p>
+    <p>Last updated July 19</p>
     <a href="demo">View demo</a> 
     <h2>Design system library thing</h2>
     <p>An interactive guide to the user interface (the thing people see and click)</p>
@@ -280,7 +280,7 @@
     <div id="page-event">
       <div class="thing-image-group">
         <div class="thing-image"></div>
-        <div class="thing-image-group">
+        <div class="thing-image-group-v">
           <div class="thing-image-group">
             <div class="thing-image"></div>
             <div class="thing-image"></div>
@@ -531,16 +531,40 @@
       </div>
     </div><!-- #sign-in -->
     <h3>Interests page</h3>
+    <p>Do these become default filters?</p>
     <div id="pick-interests">
-      <h1>Bigfoot</h1>
-      <h2>Tell Us About Your Interests</h2>
-      <p>Select from the categories to get you onboard.</p>
-      <a href="#">Skip -></a>
-      <div>
-        icon:cutlery
-        <div>Food</div>
+      <form>
+        <h1>Bigfoot</h1>
+        <div class="field-set-h">
+          <div class="fill">
+            <h2>Tell Us About Your Interests</h2>
+            <p>Select from the categories to get you onboard.</p>
+          </div>
+          <a href="#">Skip <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+        <div id="pill-interest-group">
+          <div class="pill-interest"><span>🍴</span> Food</div>
+          <div class="pill-interest"><span>😁</span> Experience</div>
+          <div class="pill-interest"><span>🎤</span> Concert</div>
+          <div class="pill-interest"><span>☕️</span> Coffee</div>
+          <div class="pill-interest"><span>🥾</span> Hiking</div>
+          <div class="pill-interest"><span>🌟</span> Experience</div>
+          <div class="pill-interest"><span>🎭</span> Entertainment</div>
+          <div class="pill-interest"><span>🌜</span> Nightlife</div>
+          <div class="pill-interest"><span>🌴</span> Beach</div>
+          <div class="pill-interest"><span>🎨</span> Art</div>
+          <div class="pill-interest"><span>🛋</span> Hotels</div>
+          <div class="pill-interest"><span>🗿</span> Attractions</div>
+        </div>
+      </form>
+      <div id="background">
+        <svg width="100%" preserveAspectRatio="xMaxYMin meet" viewBox="0 0 935 1149">
+          <mask id="squiggle_mask">
+            <path fill="#ffffff" d="M935 0H305.958C249.596 0 216.345 63.2117 248.275 109.657L320.266 214.371C342.209 246.289 334.06 289.961 302.082 311.818L206.424 377.2C171.635 400.979 165.587 449.88 193.535 481.418L246.553 541.244C274.451 572.724 268.482 621.525 233.82 645.354L83.7831 748.5C47.0844 773.729 42.9643 826.362 75.29 856.994L100.445 880.831C135.678 914.219 127.063 972.458 83.6735 994.215L39.3796 1016.43C-26.6101 1049.52 -3.06448 1149 70.7572 1149H935V0Z"/>
+          </mask>
+          <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://source.unsplash.com/7EYF9zVuWug/1280x1280" mask="url(#squiggle_mask)"></image>
+        </svg>
       </div>
-      (squiggle background image)
     </div>
   </body>
 </html>

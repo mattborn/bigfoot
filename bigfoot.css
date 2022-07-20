@@ -283,6 +283,7 @@ body { padding: 24px; }
 }
 
 .list-chips {
+  align-items: center;
   display: flex;
   gap: 8px;
 }
@@ -428,7 +429,6 @@ body { padding: 24px; }
   font-weight: 700;
   height: 48px;
   justify-content: center;
-  width: 100%;
 }
 
 #dialog-filters { width: 768px; }
@@ -548,6 +548,29 @@ body { padding: 24px; }
 .fa-star { color: #FFD545; }
 .fa-copy { color: var(--color-primary); }
 
+/* event details */
+
+#page-event {}
+
+.thing-image-group,
+.thing-image-group-v {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  gap: 24px;
+}
+.thing-image-group-v { flex-direction: column; }
+.thing-image {
+  background: transparent url(https://source.unsplash.com/aZ3qiq1eTRk/800x800) no-repeat center / cover;
+  border-radius: 24px;
+  flex: 1;
+  min-height: 160px;
+}
+
+/* user details */
+
+/* collections */
+
 /* forms */
 
 form {
@@ -581,13 +604,15 @@ form { gap: 32px; }
   gap: 24px;
   position: relative;
 }
-.field-set-h { display: flex; }
+.field-set-h {
+  align-items: center;
+  display: flex;
+}
 .field-set-h > .field-set { flex: 1; }
 
 #form-sign-in,
-#form-sign-up {
-  display: flex;
-}
+#form-sign-up,
+#pick-interests { display: flex; }
 #background { flex: 1; }
 #form-sign-in form {
   width: 824px;
@@ -616,6 +641,32 @@ input {
   right: 48px;
   top: 80px;
 }
+
+/* component - .pill-interest */
+
+#pick-interests form {
+  width: 904px;
+  padding: 152px 184px;
+}
+#pill-interest-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.pill-interest {
+  align-items: center;
+  border-radius: 44px;
+  border: 1px solid var(--color-hairline);
+  cursor: pointer;
+  display: flex;
+  font-size: 21px;
+  font-weight: 700;
+  gap: 12px;
+  height: 88px;
+  padding: 24px 48px;
+}
+.pill-interest span { font-size: 32px; }
+.pill-interest:hover { border-color: inherit; }
 
 /* DURING FAST DEV ONLY */
 /* .doc > h3,
