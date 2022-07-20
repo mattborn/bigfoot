@@ -160,41 +160,115 @@
       <div id="dialog-filters">
         <h2>Concert Filters</h2>
         <h3>Sub Categories</h3>
+        <div class="list-chips">
+          <div class="chip-variant3 active">Indian</div>
+          <div class="chip-variant3">Italian</div>
+          <div class="chip-variant3">Fast Food</div>
+          <div class="chip-variant3">Indian</div>
+        </div>
+        <h3>Sort by Source</h3>
+        <div class="list-chips">
+          <div class="chip-variant3 active">Eater</div>
+          <div class="chip-variant3">Tripadvisor</div>
+          <div class="chip-variant3">Lorem</div>
+          <div class="chip-variant3">Ipsum</div>
+        </div>
+        <h3>Sort by</h3>
+        <div class="list-chips">
+          <div class="chip-variant3 active">High Rated</div>
+          <div class="chip-variant3">Most Reviewed</div>
+          <div class="chip-variant3">Lorem</div>
+          <div class="chip-variant3">Ipsum</div>
+        </div>
         <h3>Ratings</h3>
+        <div class="list-chips">
+          <div class="chip-variant3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="chip-variant3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="chip-variant3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="chip-variant3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="chip-variant3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
         <h3>Timing</h3>
-        <h3>Pricing</h3>
+        <div class="list-chips">
+          <div class="chip-variant3 active">This Week</div>
+          <div class="chip-variant3">This Month</div>
+          <div class="chip-variant3">This Year</div>
+        </div>
         <button>Apply Filters</button>
       </div><!-- #dialog-filters -->
     </div>
     <h3>Save dialog</h3>
     <p>Opened from list of things or thing detail</p>
     <div class="inline overlay">
-      <div id="dialog-save">
-        <h2>Nina Bae Concert</h2>
-        <p>Save to Collection</p>
-        <div class="button-add">
-          <i class="button-add-icon fa-regular fa-plus"></i>
-          <div class="button-add-name">Add New</div>
+      <form id="dialog-save">
+        <div class="bar">
+          <div class="fill">
+            <h2>Nina Bae Concert</h2>
+            <p>Save to Collection</p>
+          </div>
+          <button class="button-add"><i class="button-add-icon fa-regular fa-plus"></i> Add New</button>
         </div>
-        <input id="great_local_experiences" type="checkbox">
-        <label for="great_local_experiences">Great Local Experiences</label>
-        <input id="new_york_cafes" type="checkbox">
-        <label for="new_york_cafes">New York Cafes</label>
-        <button>Add Experience</button>
-      </div><!-- #dialog-save -->
+        <div class="card-list">
+          <div class="card-checkbox">
+            <input id="great_local_experiences" type="checkbox">
+            <label for="great_local_experiences">Great Local Experiences</label>
+          </div>
+          <div class="card-checkbox">
+            <input id="new_york_cafes" type="checkbox">
+            <label for="new_york_cafes">New York Cafes</label>
+          </div>
+        </div>
+        <button type="submit">Add Experience</button>
+      </form><!-- #dialog-save -->
     </div>
     <h3>Collection dialog</h3>
     <p>Opened from save dialog and not sure where else<p>
     <div class="inline overlay">
-      <div id="dialog-save">
+      <form id="dialog-new">
         <h2>New Collection</h2>
-        <label for="collection_title">Collection Title</label>
-        <input id="collection_title" placeholder="Add Title">
-        <label for="collection_privacy">Privacy</label>
-        <input id="collection_privacy" placeholder="Private">
-        <button>Cancel</button>
-        <button>Create</button>
-      </div><!-- #dialog-save -->
+        <div class="field-set">
+          <label for="collection_title">Collection Title</label>
+          <input id="collection_title" placeholder="Add Title">
+        </div>
+        <div class="field-set"><!-- replace with drop-down -->
+          <label for="collection_privacy">Privacy</label>
+          <input id="collection_privacy" placeholder="Private">
+        </div>
+        <div class="button-group">
+          <button class="button-cancel">Cancel</button>
+          <button type="submit">Create</button>
+        </div>
+      </form><!-- #dialog-new -->
     </div>
     <div id="dialog-collection"></div><!-- #dialog-collection -->
     <h3>Map box</h3>
@@ -291,13 +365,18 @@
           </div>
         </div>
       </div>
-      <div class="list-chips">
-        <div class="chip-smaller color-orange-ish">Concert</div>
-        <div class="chip-smaller color-blue-ish">Experience</div>
-        <button>Book Now</button>
-        <div class="chip-icon"><i class="fa-regular fa-bookmark"></i></div>
-        <div class="chip-icon"><i class="fa-regular fa-share"></i></div>
+      <div class="bar">
+        <div class="list-chips fill">
+          <div class="chip-smaller color-orange-ish">Concert</div>
+          <div class="chip-smaller color-green-ish">Experience</div>
+        </div>
+        <button class="button-book">Book Now</button>
+        <div class="list-chips">
+          <div class="chip-icon"><i class="fa-regular fa-bookmark"></i></div>
+          <div class="chip-icon"><i class="fa-regular fa-share"></i></div>
+        </div>
       </div>
+      <div class="rule"></div>
       <div class="card-map-top">
         <div class="meta">
           <h2 class="meta-name">Nina Bae Concert</h2>
@@ -310,10 +389,12 @@
         </div><!-- .meta-stack -->
         <div class="card-map-price">$80</div>
       </div>
+      <div class="rule"></div>
       <div>
         <h2>Description</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet lacinia libero, quis faucibus neque. Donec ac risus dictum, egestas erat facilisis, feugiat diam. Mauris viverra elementum gravida. Praesent porttitor sed risus sit amet consequat. Donec commodo urna eu imperdiet auctor. In vel nisl et odio facilisis euismod sit amet a nisi. Nulla ullamcorper tempus consequat. Sed vitae nisi sit amet sem ultricies malesuada. Curabitur sollicitudin mi eros, et rutrum nibh porta mollis.</p>
       </div>
+      <div class="rule"></div>
       <div class="card-map-detail-group">
         <div class="card-map-detail">
           <div class="card-map-detail-icon fa-solid fa-clock"></div>
@@ -337,50 +418,99 @@
           </div>
         </div>
       </div><!-- .card-map-detail-group -->
-      <div>
-        More details @ Condé Nast Traveler
-        Logo images: Traveler, TimeOut, culture trip
+      <div class="rule"></div>
+      <div class="more-details">
+        <div>More details <a href="#">@ Condé Nast Traveler</a></div>
+        <div class="bar">
+          <img src="https://www.cntraveler.com/verso/static/conde-nast-traveler/assets/logo.ea2a447c854dc3cef5372b5bb66b7bd8433d3e53.svg">
+          <img height="80" src="https://s.clipartkey.com/mpngs/s/121-1210272_time-out-magazine-logo-clipart-png-download-time.png">
+          <svg width="198" height="30">
+            <path d="m48.4 17.96 2.52 1.71a8.14 8.14 0 0 1-7.2 4.25 7.73 7.73 0 0 1-7.9-8.07c0-5.35 4-8.07 8.02-8.07a8 8 0 0 1 6.43 3.06l-2.31 2.13A4.64 4.64 0 0 0 44 10.9a4.67 4.67 0 0 0-4.77 4.92c0 3.22 2.37 4.9 4.7 4.9a4.97 4.97 0 0 0 4.47-2.76v.01ZM63.06 16.03c0 3-1.93 4.53-3.93 4.53-1.78 0-3.09-1.2-3.09-3.55V8.18h-3.43v9.7c0 4.21 3.03 6.04 5.87 6.04 2.05 0 3.58-.88 4.64-2.38v2.05h3.4V8.18h-3.46v7.85ZM75.1 20.96c-1.12 0-2-.61-2-2.36V4.23h-3.47V18.8c0 3.67 2.34 5.13 4.9 5.13a7.2 7.2 0 0 0 3.06-.7l-1.13-2.54c-.43.18-.9.27-1.37.28ZM84.85 20.96c-1.22 0-2.21-.64-2.21-2.36v-7.3h4.7V8.18h-4.7V4.23H79.2v3.95h-3.02v3.12h3.02v7.49c0 3.55 2.5 5.13 5.17 5.13a7.74 7.74 0 0 0 3.8-1.03l-1.24-2.51a4.9 4.9 0 0 1-2.09.58ZM100.88 16.03c0 3-1.93 4.53-3.93 4.53-1.78 0-3.09-1.2-3.09-3.55V8.18h-3.43v9.7c0 4.21 3.03 6.04 5.87 6.04 2.06 0 3.58-.88 4.64-2.38v2.05h3.4V8.18h-3.47v7.85h.01ZM110.86 10.04V8.18h-3.4v15.4h3.47v-8.52c0-2.66 1.46-3.7 3.2-3.7.7 0 1.37.13 2 .4l.79-3.43a6.26 6.26 0 0 0-2.07-.37c-1.52 0-3.15.58-3.99 2.08ZM132.51 15.45c0-5.2-3.33-7.67-7.17-7.67-4.09 0-8.02 2.75-8.02 8.01 0 5.3 4.09 8.13 8.18 8.13a8.47 8.47 0 0 0 6.76-3.24l-2.21-2.1a5.31 5.31 0 0 1-4.43 2.16c-2.03 0-4.03-.95-4.55-3.36h11.32c.1-.64.14-1.28.12-1.93Zm-11.54-.88a4.07 4.07 0 0 1 4.21-3.76c2 0 3.8 1.22 3.87 3.76h-8.08ZM147.68 20.96c-1.22 0-2.22-.64-2.22-2.36v-7.3h4.65V8.18h-4.65V4.23h-3.43v3.95h-3.4v3.12h3.4v7.49c0 3.55 2.5 5.13 5.18 5.13a7.74 7.74 0 0 0 3.8-1.03l-1.25-2.51c-.69.33-1.4.58-2.09.58ZM156.6 10.04V8.18h-3.4v15.4h3.47v-8.52c0-2.66 1.46-3.7 3.2-3.7.7 0 1.37.13 2 .4l.79-3.43a6.3 6.3 0 0 0-2.07-.37c-1.53 0-3.15.58-3.99 2.08ZM164.7 23.59h3.47V8.18h-3.46v15.4ZM166.42 1a2.38 2.38 0 0 0-2.46 2.4 2.39 2.39 0 0 0 2.46 2.42 2.42 2.42 0 1 0 0-4.83ZM179.88 7.9c-2.21 0-4.08.92-5.2 2.39V8.18h-3.4v21.88h3.46v-8.34a7 7 0 0 0 5.21 2.2c3.87 0 7.64-2.8 7.64-8.04a7.62 7.62 0 0 0-7.7-7.98Zm-.37 12.94c-2.37 0-4.77-1.68-4.77-5.02 0-3.27 2.37-4.9 4.74-4.9 2.34 0 4.68 1.6 4.68 4.93 0 3.3-2.28 4.98-4.65 4.98Z" fill="#000"></path>
+            <path d="M7.31 21.51a8.63 8.63 0 0 0 8.48 8.55h7.3V19h-7.07c-2.67 0-4.94-1.27-6.81-2.86a9.5 9.5 0 0 0-1.9 5.38Z" fill="#BEDCCF"></path>
+            <path d="M8.44 15.61A10.18 10.18 0 0 1 6.3 9.09c0-2.04 1.02-3.95 2.06-5.57-4.16 2.2-7.04 7.13-7.04 12.06 0 4.93 2.88 10.15 7.08 12.1-1.02-1.62-2.1-3.52-2.1-5.55 0-2.46.68-4.73 2.12-6.52Z" fill="#2877A4"></path>
+            <path d="M7.31 9.7c0 1.9.94 3.84 2.02 5.26 1.87-1.6 4.02-2.74 6.69-2.74h7.06V1.15H15.8A8.63 8.63 0 0 0 7.3 9.69v.01Z" fill="#58FF00"></path>
+          </svg>
+        </div>
       </div>
-      Map?
+      <div class="rule"></div>
+      <div class="card-soft card-map-variant3">
+        <img src="https://fakeimg.pl/960x240">
+        <div class="card-thing-place">
+          <i class="card-thing-place-icon fa-solid fa-location-dot"></i>
+          Brooklyn, New York
+        </div>
+      </div>
+      <div class="rule"></div>
       <div>
         <h2>Reviews</h2>
+        <p>Cut from v1 scope</p>
       </div>
+      <div class="rule"></div>
       <div>
         <h2>Public Collections</h2>
-        <div class="card-collection" style="background-image: url(https://source.unsplash.com/aZ3qiq1eTRk/736x464);">
-          <div class="card-thing-top">
-            <div class="fill"></div>
-            <div class="card-thing-save"><i class="fa-regular fa-bookmark"></i></div>
+        <div id="list-cards">
+          <div class="card-thing" style="background-image: url(https://source.unsplash.com/PHYgBreyeYc/576x800);">
+            <div class="card-thing-top fill">
+              <div class="fill"></div>
+              <div class="card-thing-save"><i class="fa-regular fa-bookmark"></i></div>
+            </div>
+            <div class="card-thing-footer">
+              <img class="card-collaborator-img" src="https://i.pravatar.cc/300">
+              <h2 class="card-thing-name">Maria Justine</h2>
+              <div class="card-thing-place">Norway Concerts</div>
+            </div>
           </div>
-        </div>
-        <div class="card-collection"></div>
-        <div class="card-collection"></div>
-        <div class="card-collection"></div>
+        </div><!-- #list-cards -->
       </div>
     </div><!-- #page-event -->
     <h3>User details</h3>
     <div id="page-user">
-      <div class="card-soft">
-        user avatar
-        <h2>Linda Elizabeth</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet lacinia libero, quis faucibus neque. Donec ac risus dictum, egestas erat facilisis, feugiat diam. Mauris viverra elementum gravida. Praesent porttitor sed risus sit amet consequat. Donec commodo urna eu imperdiet auctor. In vel nisl et odio facilisis euismod sit amet a nisi. Nulla ullamcorper tempus consequat. Sed vitae nisi sit amet sem ultricies malesuada. Curabitur sollicitudin mi eros, et rutrum nibh porta mollis.</p>
-        200 Followers 100 Following 10 Collections
-        <button>Follow</button>
-        <div class="chip-icon"><i class="fa-regular fa-share"></i></div>
-      </div>
-      <div>
-        <h2>Your Collections</h2>
-        <p>Things you want to do.</p>
+      <div class="card-soft card-user">
+        <div class="avatar-variant3">
+          <img src="https://i.pravatar.cc/300">
+        </div>
         <div>
-          <i class="fa-regular fa-share"></i>
+          <h2>Linda Elizabeth</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet lacinia libero, quis faucibus neque. Donec ac risus dictum, egestas erat facilisis, feugiat diam.</p>
+          <div class="bar">
+            <div class="stat-group fill">
+              <div class="stat">
+                <div class="stat-value">200</div>
+                <div class="stat-label">Followers</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">100</div>
+                <div class="stat-label">Following</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">10</div>
+                <div class="stat-label">Collections</div>
+              </div>
+            </div>
+            <button class="button-follow">Follow</button>
+            <div class="chip-icon"><i class="fa-regular fa-share"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="bar">
+        <div>
+          <h2>Your Collections</h2>
+          <p>Things you want to do.</p>
+        </div>
+        <div class="fill">
+          <i class="fa-regular fa-search"></i>
           <input placeholder="Search Collection">
         </div>
-        <button>+ Collection</button>
+        <button class="button-collection">+ Collection</button>
       </div>
       <div class="card-collection">
-        icon
+        <div class="card-collection-top fill" style="background-image: url(https://source.unsplash.com/StFUwkNsvcY/576x800);">
+          <div class="card-collection-icon">
+            <i class="fa-regular fa-globe"></i>
+          </div>
+        </div>
         <div class="card-collection-footer">
-          Local Concerts
+          <h2>Local Concerts</h2>
           20 Saved
         </div>
       </div>
@@ -431,27 +561,32 @@
       </form>
     </div><!-- #form-collection -->
     <h3>Collection options dialog</h3>
-    <div id="dialog-collection-options">
-      <h2>Collection options</h2>
-      <div>
-        <div>icon:image-edit</div>
-        <div>Edit Collection</div>
-      </div>
-      <div>
-        <div>icon:trash-alt</div>
-        <div>Delete Collection</div>
-      </div>
-    </div><!-- #dialog-collection-options -->
+    <div class="inline overlay">
+      <div id="dialog-collection-options">
+        <h2>Collection options</h2>
+        <div class="card-action"><i class="fa-regular fa-square-pen"></i> Edit Collection</div>
+        <div class="card-action"><i class="fa-regular fa-trash-alt"></i> Delete Collection</div>
+      </div><!-- #dialog-collection-options -->
+    </div>
     <h3>Collaborator dialog</h3>
-    <div id="dialog-collaborators">
-      <div>
-        <div>Circle face</div>
-        <div>Maria Linda</div>
-      </div>
-      (2 more here)
-      (slide to reveal trash button?)
-      (does this make sense?)
-    </div><!-- #dialog-collaborators -->
+    <p>Slide to reveal trash button, and does this UX make sense?</p>
+    <div class="inline overlay">
+      <div id="dialog-collaborators">
+        <h2>Collaborators</h2>
+        <div class="card-collaborator">
+          <img class="card-collaborator-img" src="https://i.pravatar.cc/300">
+          <div>Maria Linda</div>
+        </div>
+        <div class="card-collaborator">
+          <img class="card-collaborator-img" src="https://i.pravatar.cc/300">
+          <div>Jung Jongyoon</div>
+        </div>
+        <div class="card-collaborator">
+          <img class="card-collaborator-img" src="https://i.pravatar.cc/300">
+          <div>Alan Raymondo</div>
+        </div>
+      </div><!-- #dialog-collaborators -->
+    </div>
     <h3>Background squiggle mask</h3>
     <p>Wanted to be able to reuse this as an SVG mask with any image (might need to mess with it to make fully responsive)</p>
     <div id="background">

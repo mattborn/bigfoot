@@ -293,13 +293,28 @@ body { padding: 24px; }
   height: 40px;
   padding: 0 20px;
 }
-.color-orange-ish,
-.color-blue-ish {
+.color-blue-ish,
+.color-green-ish,
+.color-orange-ish {
   border: none;
   color: var(--color-white);
 }
-.color-orange-ish { background: #F68160; }
 .color-blue-ish { background: #6EA0FF; }
+.color-green-ish { background: #00cd88; }
+.color-orange-ish { background: #F68160; }
+
+.chip-variant3 {
+  background: #f9f9f9;
+  border-radius: 8px;
+  color: #B0B0B0;
+  cursor: pointer;
+  padding: 12px 20px;
+  white-space: nowrap;
+}
+.chip-variant3.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
 
 /* component - .meta */
 
@@ -414,13 +429,15 @@ body { padding: 24px; }
   width: calc(100vw - 48px);
 }
 
-.overlay > div {
+.overlay > div,
+.overlay > form {
   background: var(--color-white);
   border-radius: 32px;
   padding: 48px;
   width: 496px;
 }
-.overlay h2 { margin: 0; }
+.overlay h2,
+.overlay h3 { margin: 0; }
 /* .overlay */ button { 
   align-items: center;
   background: var(--color-primary);
@@ -431,7 +448,12 @@ body { padding: 24px; }
   justify-content: center;
 }
 
-#dialog-filters { width: 768px; }
+#dialog-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 848px;
+}
 
 #map {
   border-radius: 24px;
@@ -548,9 +570,100 @@ body { padding: 24px; }
 .fa-star { color: #FFD545; }
 .fa-copy { color: var(--color-primary); }
 
+/* dialogs */
+
+.bar {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+
+.button-add {
+  background: #000;
+  border-radius: 32px;
+  font-size: 18px;
+  gap: 12px;
+  height: 64px;
+  padding: 16px 24px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* component - .button-group */
+
+.button-group {
+  display: flex;
+  gap: 24px;
+}
+.button-group button {
+  border-radius: 18px;
+  flex: 1;
+  height: 88px;
+}
+.button-cancel {
+  background: #f6f6f6;
+  color: #a5a5a5;
+}
+
+/* component - .card-option */
+
+#dialog-collection-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card-action {
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  gap: 20px;
+  height: 104px;
+  padding: 32px 48px;
+}
+.card-action svg { font-size: 32px; }
+.fa-square-pen { color: #00cd88; }
+.fa-trash-alt { color: #F68160; }
+
+/* component - .card-collaborator */
+
+#dialog-collaborators {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card-collaborator {
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  height: 104px;
+  padding: 16px 32px;
+}
+.card-collaborator-img {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+}
+
 /* event details */
 
-#page-event {}
+#page-event {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
 .thing-image-group,
 .thing-image-group-v {
@@ -567,22 +680,148 @@ body { padding: 24px; }
   min-height: 160px;
 }
 
+.button-book { width: 324px; }
+
+.rule {
+  background: var(--color-hairline);
+  height: 1px;
+}
+
+.more-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.more-details .bar { gap: 80px; }
+
+.card-soft {
+  border-radius: 18px;
+  box-shadow: 0 15px 30px #0002;
+}
+
+.card-map-variant3 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+.card-map-variant3 img { /* temporary */
+  border-radius: 20px;
+  width: 100%;
+}
+.card-map-variant3 .card-thing-place { color: #939393; }
+
 /* user details */
+
+.card-user {
+  align-items: flex-start;
+  display: flex;
+  gap: 64px;
+  padding: 48px;
+}
+.card-user h2 { margin: 0 0 16px; }
+.card-user p {
+  line-height: 1.4;
+  margin: 0 0 32px;
+}
+
+.avatar-variant3 {
+  border-radius: 50%;
+  background: linear-gradient(0deg, #575FCC, #FF5858);
+  flex-shrink: 0;
+  padding: 4px;
+  width: 200px;
+}
+.avatar-variant3 img {
+  border-radius: 50%;
+  border: 16px solid var(--color-white);
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.card-user h2 { font-size: 30px; }
+.card-user p {
+  color: #939393;
+  font-size: 20px;
+}
+
+.stat-group {
+  display: flex;
+  gap: 24px;
+}
+.stat { text-align: center; }
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+}
+.stat-label {
+  color: #676767;
+  font-size: 18px;
+  line-height: 2em;
+}
+
+.button-follow {
+  height: 64px;
+  width: 240px;
+}
+
+.button-collection {
+  background: #00cd88;
+  border-radius: 36px;
+  font-size: 24px;
+  height: 72px;
+  padding: 16px 40px;
+}
+
+.card-collection {
+  border-radius: 24px;
+  box-shadow: 0 15px 30px #0002;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  overflow: hidden;
+  transition: background-size .2s var(--easing);
+  width: 288px;
+}
+.card-collection-top {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 24px;
+}
+.card-collection-icon {
+  align-items: center;
+  background: #00cd88;
+  border-radius: 50%;
+  color: var(--color-white);
+  display: flex;
+  font-size: 20px;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+.card-collection h2 { margin: 0; }
+.card-collection-footer {
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 32px;
+}
 
 /* collections */
 
 /* forms */
 
-form {
-  font-size: 20px;
-  line-height: 1.5;
-}
+form { font-size: 20px; }
 form h1 {
   margin: 0 0 24px;
   text-align: center;
 }
 form h2,
 form p { margin: 0; }
+form p { line-height: 1.5; }
 form p,
 form label { color: #A5A5A5; }
 form button,
@@ -642,6 +881,19 @@ input {
   top: 80px;
 }
 
+.card-checkbox {
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  gap: 32px;
+  height: 104px;
+  padding: 32px 40px;
+}
+.card-checkbox label { color: inherit; }
+
 /* component - .pill-interest */
 
 #pick-interests form {
@@ -688,8 +940,6 @@ input {
 #form-user,
 #page-collection,
 #form-collection,
-#dialog-collection-options,
-#dialog-collaborators,
 #background,
 #form-sign-up,
 #form-sign-in,
