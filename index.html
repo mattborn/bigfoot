@@ -12,7 +12,7 @@
   </head>
   <body class="doc">
     <h1>Bigfoot.design</h1>
-    <p>Last updated July 19</p>
+    <p>Last updated July 26</p>
     <a href="demo">View demo</a> 
     <h2>Design system library thing</h2>
     <p>An interactive guide to the user interface (the thing people see and click)</p>
@@ -520,9 +520,15 @@
     </div><!-- #page-user -->
     <h3>User form</h3>
     <div id="form-user">
-      user avatar (same component as above)
-      Linda Elizabeth
-      <a href="#">Change Profile Photo</a>
+      <div class="triplet">
+        <div class="avatar-variant3">
+          <img src="https://i.pravatar.cc/300">
+        </div>
+        <div class="triplet-stack">
+          <h2>Linda Elizabeth</h2>
+          <a href="#">Change Profile Photo</a>
+        </div>
+      </div>
       <h3>Edit Profile</h3>
       <form>
         <label for="user_fullname">Your Name</label>
@@ -537,13 +543,69 @@
       </form>
     </div><!-- #form-user -->
     <h3>Collection details</h3>
+    <p>Many common components with deviations for the dark border avatars and button sizes</p>
     <div id="page-collection">
-      ???
+      <div class="card-collection-hero" style="background-image: url(https://source.unsplash.com/Yrxr3bsPdS0/1600x1200);">
+        <div class="card-collection-hero-top">
+          <div class="card-collection-hero-menu"><i class="fa-regular fa-ellipsis-v"></i></div>
+        </div>
+        <div class="card-collection-hero-footer">
+          <div class="triplet fill">
+            <img class="triplet-img" src="https://i.pravatar.cc/300">
+            <div class="triplet-stack">
+              <h2 class="triplet-name">Linda Elizabeth</h2>
+              <div class="triplet-meta">Great Hotels · 12 Saved</div>
+            </div>
+          </div>
+          <div class="faces">
+            <img src="https://i.pravatar.cc/300">
+            <img src="https://i.pravatar.cc/300">
+            <img src="https://i.pravatar.cc/300">
+          </div>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="fill">
+          <h2>Visited Places</h2>
+          <p>2 out of 12 Hotels</p>
+        </div>
+        <div class="list-chips">
+          <div class="nav-tab active">
+            <i class="nav-tab-icon fa-solid fa-map"></i>
+            <div class="nav-tab-label">List</div>
+          </div>
+          <div class="chip-icon"><i class="fa-regular fa-share"></i></div>
+          <button class="button-add"><i class="button-add-icon fa-regular fa-plus"></i> Add New</button>
+        </div>
+      </div>
+      <div class="card-place">
+        <div class="card-place-img" style="background-image: url(https://source.unsplash.com/rlwE8f8anOc/800x600);">
+          <button class="button-add"><i class="button-add-icon fa-regular fa-plus"></i> Add notes</button>
+        </div>
+        <div class="card-place-stats">
+          <div class="bar fill">
+            <div class="upvote"><i class="fa-regular fa-arrow-up"></i> 5</div>
+            <div class="downvote"><i class="fa-regular fa-arrow-down"></i> 2</div>
+          </div>
+          <i class="fa-regular fa-comment"></i> 7 comments
+        </div>
+        <div class="bar">
+          <div class="stack fill">
+            <h3>Pine Woods Hotels</h3>
+            <p>The pool area is amazing!</p>
+          </div>
+          <div class="card-place-pill">Visited 0 times</div>
+        </div>
+      </div><!-- also .card-thing-variant2 -->
     </div><!-- #page-collection -->
     <h3>Collection form</h3>
     <div id="form-collection">
-      hero image w/ fade
-      <a href="#">Swap Photo icon:image-edit</a>
+      <div class="position-button-swap">
+        <div class="card-collection-hero" style="background-image: url(https://source.unsplash.com/Yrxr3bsPdS0/1600x1200);">
+          <div class="card-collection-hero-footer"></div>
+        </div>
+        <a class="button-swap" href="#">Swap Photo <i class="fa-regular fa-square-pen"></i></a>
+      </div>
       <h3>Edit Collection</h3>
       <form>
         <label for="collection_name">Collection Name</label>
@@ -553,10 +615,14 @@
         <label for="collection_about">Description</label>
         <textarea id="collection_about" value="Lorem ipsum…"></textarea>
         <label for="collection_password">Add Collaborators</label>
-        <input id="collection_password" value="@Jinadinkle">
-        <div>Circle face 1</div>
-        <div>Circle face 2</div>
-        <div>plus in a circle</div>
+        <div class="position-faces">
+          <input id="collection_password" value="@Jinadinkle">
+          <div class="faces-variant2">
+            <img src="https://i.pravatar.cc/300">
+            <img src="https://i.pravatar.cc/300">
+            <div class="button-plus"><i class="fa-regular fa-plus"></i></div>
+          </div>
+        </div>
         <button>Update Changes</button>
       </form>
     </div><!-- #form-collection -->
